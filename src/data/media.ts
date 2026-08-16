@@ -23,8 +23,8 @@ export const DRIVE_IMAGE_URL_REQUIRED = "DRIVE_IMAGE_URL_REQUIRED";
 export const mediaAssets = {
   homeAbout: {
     id: "home-about",
-    original_url: DRIVE_IMAGE_URL_REQUIRED,
-    provider: "drive" as const,
+    original_url: "/image.png",
+    provider: "external" as const,
     alt_text: "SAICONS members at a community service project",
   } satisfies MediaAsset,
   joinHero: {

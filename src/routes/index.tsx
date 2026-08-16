@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowRight } from "lucide-react";
 import * as Icons from "lucide-react";
+import { mediaAssets, resolveAsset } from "@/data/media";
 import {
   PageContainer,
   Section,
@@ -217,10 +218,18 @@ function HomePage() {
 
           <div className="lg:col-span-5 flex flex-col gap-6">
              {/* Photo block */}
-             <div className="flex-1 rounded-[2.5rem] border border-white/10 bg-white/[0.05] relative overflow-hidden min-h-[300px] flex items-center justify-center">
-                 <p className="px-6 text-center text-xs text-white/30 uppercase tracking-widest font-semibold">
-                   Club photo — add a Google Drive image to the media registry
-                 </p>
+             <div className="flex-1 rounded-[2.5rem] border border-white/10 bg-white/[0.05] relative overflow-hidden min-h-[300px] flex items-center justify-center group">
+                 {resolveAsset(mediaAssets.homeAbout)?.resolved_url ? (
+                   <img 
+                     src={resolveAsset(mediaAssets.homeAbout)?.resolved_url} 
+                     alt={mediaAssets.homeAbout.alt_text}
+                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   />
+                 ) : (
+                   <p className="px-6 text-center text-xs text-white/30 uppercase tracking-widest font-semibold">
+                     Club photo — add a Google Drive image to the media registry
+                   </p>
+                 )}
              </div>
              
              {/* Quote block */}

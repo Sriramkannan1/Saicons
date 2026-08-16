@@ -18,9 +18,9 @@ export const homeSections = {
   },
 
   stats: [
-    { title: "10+", label: "YEARS IN SERVICE" },
-    { title: "150+", label: "PROJECTS COMPLETED" },
-    { title: "120+", label: "ACTIVE MEMBERS" },
+    { title: "38", label: "YEARS IN SERVICE" },
+    { title: "2500", label: "PROJECTS COMPLETED" },
+    { title: "30+", label: "ACTIVE MEMBERS" },
     { title: "200K+", label: "LIVES IMPACTED" },
   ],
 
