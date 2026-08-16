@@ -41,7 +41,8 @@ export function InteractiveGlobe({ className = "" }: { className?: string }) {
         // Coimbatore location
         { location: [11.0168, 76.9558], size: 0.1 },
       ],
-      onRender: (state) => {
+      // @ts-expect-error - onRender is missing from cobe typings
+      onRender: (state: Record<string, any>) => {
         if (pointerInteracting.current === null) {
           phi += 0.003;
         }

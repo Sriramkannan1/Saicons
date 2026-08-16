@@ -6,7 +6,7 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 export default defineConfig({
   plugins: [tailwindcss(), tanstackStart({
     server: {
-      preset: 'netlify'
+      preset: 'node-server'
     }
   }), react()],
   resolve: {

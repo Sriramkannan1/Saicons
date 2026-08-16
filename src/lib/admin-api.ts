@@ -38,7 +38,7 @@ async function fetchAdmin(action: string, data: any = {}) {
     throw new Error("Unauthorized: Please log in.");
   }
 
-  const payload = {
+  const payload: Record<string, any> = {
     action,
     authToken: token,
     data,
